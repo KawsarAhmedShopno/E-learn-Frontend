@@ -330,14 +330,13 @@ a.twitter {
   font-weight: 300;
 }
 .footerLink {
-  font-size: 15px;
-  text-decoration: none;
-  color: #ffffff;
+  text-decoration: none !important;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff !important;
+  font-weight: 200;
+  font-size: 10px;
 }
-.footerLink:hover {
-  text-decoration: none;
-  color: #ffd900;
-}
+
 .footer {
   background-color: #002c61;
 }

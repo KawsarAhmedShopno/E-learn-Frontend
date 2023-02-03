@@ -14,6 +14,8 @@ import Refundpage from "../pages/Refundpage";
 import Termspage from "../pages/Termspage";
 import Privacypage from "../pages/Privacypage";
 import NotFound from "../pages/NotFound";
+import Company from "../component/Company";
+import Companypage from "../pages/Companypage";
 class Approuter extends Component {
   render() {
     return (
@@ -35,7 +37,7 @@ class Approuter extends Component {
           <Route path="/refund" element={<Refundpage />} />
           <Route path="/terms" element={<Termspage />} />
           <Route path="/privacy" element={<Privacypage />} />
-          <Route path="/company" element={<NotFound />} />
+          <Route path="/company" element={<Companypage />} />
         </Routes>
       </div>
     );

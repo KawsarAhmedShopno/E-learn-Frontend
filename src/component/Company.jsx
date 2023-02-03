@@ -1,20 +1,21 @@
 import React, { Component, Fragment } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import RestClint from "../restapi/RestClint";
 import AppUrl from "../restapi/AppUrl";
+
 import Loading from "./Loading";
-class Terms extends Component {
+class Company extends Component {
   constructor() {
     super();
     this.state = {
-      terms: "...",
+      company: "...",
       loading: true,
     };
   }
   componentDidMount() {
     RestClint.GetRequest(AppUrl.Information).then((result) => {
       this.setState({
-        terms: result[0]["terms"],
+        company: result[0]["company"],
         loading: false,
       });
     });
@@ -26,12 +27,12 @@ class Terms extends Component {
     } else {
       return (
         <Fragment>
-          <Container>
+          <Container className="mt-5">
             <Row>
               <Col lg={12} md={12} sm={12}>
-                <h1 className="serviceName">Trems And Condition</h1>
+                <h1 className="serviceName">Company profile</h1>
                 <hr />
-                <p className="serviceDescription">{this.state.terms}</p>
+                <p className="serviceDescription">{this.state.company}</p>
               </Col>
             </Row>
           </Container>
@@ -40,4 +41,4 @@ class Terms extends Component {
     }
   }
 }
-export default Terms;
+export default Company;
